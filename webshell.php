@@ -191,7 +191,7 @@ function check_exec_function($disabled, $func){
 
 function check_exec_functions() {
   $disabled = explode(',', ini_get('disable_functions'));
-  $funcs = ["exec", "passtrhu", "system", "shell_exec", "popen", "proc_open", "pcntl_exec", "mail", "putenv"];
+  $funcs = ["exec", "passthru", "system", "shell_exec", "popen", "proc_open", "pcntl_exec", "mail", "putenv"];
   foreach ($funcs as $func) {
     check_exec_function($disabled, $func);
   }
